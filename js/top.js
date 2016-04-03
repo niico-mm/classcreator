@@ -3,6 +3,8 @@ $(function() {
   setHierSelect();
   decisionInput();
   createClass();
+  validate($('#level-4'), '詳細は半角英小文字で入力してください');
+  validate($('#level-5'), '連番は半角数字で入力してください');
 });
 
 function initSelect() {
@@ -28,7 +30,9 @@ function setHierSelect() {
 }
 
 function decisionInput () {
-  if ($('#level-2 option:not(.default)').is(':selected') && $('#level-4').val() !== "") {
+  if ($('#level-2 option:not(.default)').is(':selected')
+      && $('#level-4').val() !== ''
+      && $('#js-error').text() === '') {
     $('#js-trigger').attr('disabled', false).removeClass('disabled');
   } else {
     $('#js-trigger').attr('disabled', true).addClass('disabled');
@@ -49,20 +53,6 @@ function createClass () {
     var lv4 = $('#level-4').val();
     var lv5 = $('#level-5').val();
 
-    // if (lv3) {
-    //   var primaryName = lv2 + '-' + lv3;
-    // } else {
-    //   var primaryName = lv2;
-    // }
-    //
-    // if (lv5) {
-    //   var secondaryName = lv4 + '-' + lv5;
-    // } else {
-    //   var secondaryName = lv4;
-    // }
-    //
-    // var createName = primaryName + '-' + secondaryName;
-
     var createName = lv2;
     if (lv3) {
       createName = createName + '-' + lv3;
@@ -73,5 +63,17 @@ function createClass () {
     }
 
     $('#js-create').text(createName);
+  });
+}
+
+function validate (target, message) {
+  target.on('blur', function() {
+    if( $(this)[0].checkValidity() === false ){
+      $('#js-error').text(message);
+      decisionInput();
+    } else {
+      $('#js-error').text('');
+      decisionInput();
+    }
   });
 }

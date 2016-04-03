@@ -10,6 +10,7 @@
 .contents {
   width: 80%;
   margin: 60px auto;
+  font-size: 1.6rem;
   text-align: center;
 }
 
@@ -25,6 +26,7 @@
 .list-flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .list-flex li {
@@ -32,6 +34,10 @@
   background-color: powderblue;
   border-radius: 10px;
   text-align: left;
+}
+
+.list-flex li:nth-child(even) {
+  background-color: #fff;
 }
 
 input[type="text"],
@@ -71,5 +77,9 @@ input[type="checkbox"] {
 }
 
 .txt-common {
+  font-size: 2.4rem;
+}
+
+.txt-create {
   font-size: 2.4rem;
 }

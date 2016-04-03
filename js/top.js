@@ -7,6 +7,7 @@ $(function() {
 function initSelect() {
   $('#level-2 option:not(.default)').hide();
   $('#level-2 option').attr('selected', false);
+  $('#level-3').prop('checked', false);
 }
 
 function setHierSelect() {
@@ -14,6 +15,12 @@ function setHierSelect() {
     initSelect();
     var categoryName = $('#level-1 option:selected').data('cat');
     $('#level-2 [data-cat="' + categoryName + '"]').show();
+
+    if(categoryName == 'rayout') {
+      $('#level-3').attr('disabled', true).addClass('disabled');
+    } else {
+      $('#level-3').attr('disabled', false).removeClass('disabled');
+    }
   });
 }
 
@@ -27,6 +34,6 @@ function createClass () {
 
     console.log(createName);
 
-    $('.txt-create').append(createName);
+    $('#js-create').text(createName);
   });
 }

@@ -11,12 +11,10 @@ article, aside, figure, figcaption, footer, header, nav, section
 html { font-size: 62.5%;}
 body {
   line-height: 1.6;
-  color: #666;
+  color: dimgray;
 }
 body, input, textarea, select, button {
   font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  /* 明朝フォント
-  font-family: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "游明朝体", "Yu Mincho", YuMincho, serif;*/
 }
 body, div, pre, p, blockquote, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, th, td, button, figure, figcaption
 { margin: 0; padding: 0;}

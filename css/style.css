@@ -23,7 +23,20 @@
   font-size: 1.4rem;
 }
 
+.box-border {
+  height: 4.8em;
+  line-height: 4.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.box-border p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
 .list-flex {
+  margin: 50px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +74,14 @@ input[type="checkbox"] {
   margin-right: 5px;
 }
 
+.form-checkbox + span {
+  font-size: 2.4rem;
+}
+
+.form-checkbox.disabled + span {
+  color: darkgray;
+}
+
 .form-select {
   display: block;
 }
@@ -74,12 +95,4 @@ input[type="checkbox"] {
   width: 20%;
   margin: 50px auto;
   cursor: pointer;
-}
-
-.txt-common {
-  font-size: 2.4rem;
-}
-
-.txt-create {
-  font-size: 2.4rem;
 }

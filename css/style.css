@@ -1,5 +1,5 @@
 .header {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
 }
 
@@ -9,7 +9,8 @@
 
 .contents {
   width: 80%;
-  margin: 60px auto;
+  margin: 0 auto;
+  padding: 40px 0;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -35,22 +36,28 @@
   font-weight: bold;
 }
 
-.list-flex {
+.box-flex {
   margin: 50px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.list-flex li {
+.box-flex > div {
   padding: 20px;
   background-color: powderblue;
   border-radius: 10px;
   text-align: left;
 }
 
-.list-flex li:nth-child(even) {
+.box-flex > div:nth-child(even) {
   background-color: #fff;
+}
+
+select {
+  height: 2.4em;
+  background-color: #fff;
+  font-size: 1.6rem;
 }
 
 input[type="text"],
@@ -58,13 +65,6 @@ input[type="button"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
-  font-size: 1.6rem;
-}
-
-select {
-  height: 2.4em;
-  background-color: #fff;
   font-size: 1.6rem;
 }
 
@@ -94,5 +94,13 @@ input[type="checkbox"] {
   display: inline-block;
   width: 20%;
   margin: 50px auto;
+  background-color: steelblue;
+  color: #fff;
+  line-height: 2.4em;
   cursor: pointer;
+}
+
+.form-button.disabled {
+  color: darkgray;
+  background-color: #fff;
 }

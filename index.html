@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Creator</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/top.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Class Creator</h1>
+  </header>
+  <article class="contents">
+    <ul class="list-flex">
+      <li>
+        <select id="level-1" class="form-select" name="category">
+          <option value="" class="default" selected>選択してください</option>
+          <option value="レイアウト系" data-cat="rayout">レイアウト系</option>
+          <option value="セクション・ボックス系" data-cat="section">セクション・ボックス系</option>
+          <option value="グリッド系" data-cat="grid">グリッド系</option>
+        </select>
+        <select id="level-2" class="form-select" name="identifier">
+          <option value="" class="default" selected>選択してください</option>
+          <option value="header" data-cat="rayout">header</option>
+          <option value="footer" data-cat="rayout">footer</option>
+          <option value="contents" data-cat="rayout">contents</option>
+          <option value="area" data-cat="section">area</option>
+          <option value="sec" data-cat="section">sec</option>
+          <option value="box" data-cat="section">box</option>
+          <option value="grid" data-cat="grid">grid</option>
+        </select>
+      </li>
+      <li>
+        <label><input type="checkbox" name="" value="cmn"><span class="txt-common">cmn</span></label>
+      </li>
+      <li>
+        <input type="text" class="form-text" name="" value="">
+      </li>
+      <li>
+        <input type="text" class="form-text" name="" value="">
+      </li>
+    </ul>
+    <input id="js-trigger" type="button" class="form-button" name="" value="Create!">
+  </article>
+  <footer class="footer">
+    <p class="footer-copyright">&copy; 2016 M.M</p>
+  </footer>
+</body>
+</html>

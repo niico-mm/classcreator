@@ -90,6 +90,11 @@ input[type="checkbox"] {
   margin-top: 20px;
 }
 
+.form-select option[title] {
+  background-color: black;
+  color: white;
+}
+
 .form-button {
   display: inline-block;
   width: 20%;

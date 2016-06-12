@@ -80,6 +80,10 @@ input[type="checkbox"] {
   + .form-select {
     margin-top: 20px;
   }
+  option[title] {
+    background-color: black;
+    color: white;
+  }
 }
 .form-button {
   display: inline-block;

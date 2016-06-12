@@ -104,3 +104,28 @@ input[type="checkbox"] {
   font-size: 1.6rem;
   color: crimson;
 }
+
+.box-flex-usage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div {
+    width: 100%;
+    border-right: 1px solid darkgray;
+    &:first-child {
+      border-left: 1px solid darkgray;
+    }
+  }
+}
+.table-usage {
+  width: 100%;
+  th,td {
+    padding: 5px 10px;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+  }
+  th {
+    background-color: steelblue;
+    color: white;
+  }
+}

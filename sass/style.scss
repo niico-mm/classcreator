@@ -1,28 +1,59 @@
 @charset "UTF-8";
 
-
+/* ----------------------------------------------------------
+ layout
+---------------------------------------------------------- */
 .header {
-  padding: 40px;
-  text-align: center;
-  h1 {
-    font-size: 3.2rem;
+  padding: 10px 20px;
+  text-align: right;
+  background-color: steelblue;
+  color: #fff;
+  .header-ico {
+    display: inline-block;
+    width: 45px;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 .contents {
-  width: 80%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px 80px;
   font-size: 1.6rem;
-  text-align: center;
 }
 .footer {
-  padding: 20px;
+  padding: 10px 20px;
   text-align: center;
+  background-color: steelblue;
   .footer-copyright {
     font-size: 1.4rem;
+    color: #fff;
   }
 }
 
+/* ----------------------------------------------------------
+ common
+---------------------------------------------------------- */
+.ttl-cmn-01 {
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.txt-cmn-01 {
+  font-size: 1.6rem;
+}
+.txt-error {
+  margin: 10px 0 0;
+  height: 2.4em;
+  font-size: 1.6rem;
+  color: crimson;
+  text-align: center;
+}
+.btn-cmn-01 {
+  margin: 50px 0;
+  text-align: center;
+}
 .box-border {
   height: 4.8em;
   line-height: 4.8em;
@@ -31,19 +62,23 @@
   p {
     font-size: 2.4rem;
     font-weight: bold;
+    text-align: center;
   }
 }
 .box-flex {
   margin: 30px 0 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  > div {
+  .box-flex-in {
     padding: 20px;
+    align-self: center;
     background-color: powderblue;
     border-radius: 10px;
-    text-align: left;
+    &:first-child {
+      flex-shrink: 0;
+    }
     &:nth-child(even) {
+      padding: 0 10px;
       background-color: #fff;
     }
   }
@@ -87,8 +122,7 @@ input[type="checkbox"] {
 }
 .form-button {
   display: inline-block;
-  width: 20%;
-  margin: 50px auto;
+  width: 30%;
   background-color: steelblue;
   color: #fff;
   line-height: 2.4em;
@@ -97,12 +131,6 @@ input[type="checkbox"] {
     color: darkgray;
     background-color: #fff;
   }
-}
-.txt-error {
-  margin: 10px 0 0;
-  height: 2.4em;
-  font-size: 1.6rem;
-  color: crimson;
 }
 
 .box-flex-usage {

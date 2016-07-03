@@ -44,6 +44,13 @@
   text-align: center;
 }
 
+.ttl-cmn-02 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  border-top: 2px solid steelblue;
+}
+
 .txt-cmn-01 {
   font-size: 1.6rem;
 }
@@ -154,15 +161,14 @@ input[type="checkbox"] {
 .box-flex-usage {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.box-flex-usage > div {
+.box-flex-usage .box-flex-usage-in {
+  align-self: flex-start;
   width: 100%;
-  border-right: 1px solid darkgray;
 }
 
-.box-flex-usage > div:first-child {
+.box-flex-usage .box-flex-usage-in:first-child {
   border-left: 1px solid darkgray;
 }
 
@@ -173,10 +179,14 @@ input[type="checkbox"] {
 .table-usage th, .table-usage td {
   padding: 5px 10px;
   border-top: 1px solid darkgray;
+  border-right: 1px solid darkgray;
   border-bottom: 1px solid darkgray;
 }
 
 .table-usage th {
-  background-color: steelblue;
-  color: white;
+  background-color: powderblue;
+}
+
+.table-usage tr td:first-child {
+  background-color: #eee;
 }

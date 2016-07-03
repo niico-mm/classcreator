@@ -40,6 +40,12 @@
   margin-bottom: 30px;
   text-align: center;
 }
+.ttl-cmn-02 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  border-top: 2px solid steelblue;
+}
 .txt-cmn-01 {
   font-size: 1.6rem;
 }
@@ -136,10 +142,9 @@ input[type="checkbox"] {
 .box-flex-usage {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  > div {
+  .box-flex-usage-in {
+    align-self: flex-start;
     width: 100%;
-    border-right: 1px solid darkgray;
     &:first-child {
       border-left: 1px solid darkgray;
     }
@@ -150,10 +155,15 @@ input[type="checkbox"] {
   th,td {
     padding: 5px 10px;
     border-top: 1px solid darkgray;
+    border-right: 1px solid darkgray;
     border-bottom: 1px solid darkgray;
   }
   th {
-    background-color: steelblue;
-    color: white;
+    background-color: powderblue;
+  }
+  tr {
+    td:first-child{
+      background-color: #eee;
+    }
   }
 }

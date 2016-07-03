@@ -5,7 +5,7 @@
   <title>Class Creator</title>
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <script src="/js/jquery.js"></script>
   <script src="/js/top.js"></script>
 </head>
@@ -29,6 +29,7 @@
           <option value="セクション・ボックス系" data-cat="section">セクション・ボックス系</option>
           <option value="グリッド系" data-cat="grid">グリッド系</option>
           <option value="モジュール系" data-cat="module">モジュール系</option>
+          <option value="状態" data-cat="state">状態</option>
         </select>
         <select id="level-2" class="form-select" name="identifier">
           <option value="" class="default" selected>選択してください</option>
@@ -52,13 +53,17 @@
           <option value="list" data-cat="module">list</option>
           <option value="table" data-cat="module">table</option>
           <option value="form" data-cat="module">form</option>
+          <option value="is" data-cat="state">is</option>
+          <option value="s" data-cat="state">s</option>
+          <option value="only" data-cat="state">only</option>
+          <option value="no" data-cat="state">no</option>
         </select>
       </div><!-- /box-flex-in -->
       <div class="box-flex-in">
         ー
       </div><!-- /box-flex-in -->
       <div class="box-flex-in">
-        <label><span><input id="level-3" type="checkbox" class="form-checkbox" name="" value="cmn"></span><span>cmn</span></label>
+        <label class="form-checkbox"><span><input id="level-3" type="checkbox" name="" value="cmn"></span><span>cmn</span></label>
       </div><!-- /box-flex-in -->
       <div class="box-flex-in">
         ー

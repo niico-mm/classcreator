@@ -143,11 +143,11 @@ input[type="checkbox"] {
 }
 
 .form-checkbox {
-  + span {
+  span {
     font-size: 2.4rem;
-  }
-  &.disabled + span {
-    color: darkgray;
+    &.disabled + span {
+      color: darkgray;
+    }
   }
 }
 .form-select {

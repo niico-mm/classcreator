@@ -160,11 +160,11 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
-.form-checkbox + span {
+.form-checkbox span {
   font-size: 2.4rem;
 }
 
-.form-checkbox.disabled + span {
+.form-checkbox span.disabled + span {
   color: darkgray;
 }
 

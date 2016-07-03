@@ -2,9 +2,10 @@ $(function() {
   initSelect();
   setHierSelect();
   decisionInput();
-  createClass();
-  validate($('#level-4'), '詳細は半角英小文字で入力してください');
-  validate($('#level-6'), '連番は半角数字で入力してください');
+  setEventHandler();
+  setValidation($('#level-4'), '詳細は半角英小文字で入力してください');
+  setValidation($('#level-5'), '詳細は半角英小文字で入力してください');
+  setValidation($('#level-6'), '連番は半角数字で入力してください');
 });
 
 function initSelect() {
@@ -21,10 +22,12 @@ function setHierSelect() {
     $('#level-2 [data-cat="' + categoryName + '"]').show();
 
     //rayoutのときにcmnの入力不可
-    if(categoryName === 'rayout') {
+    if(categoryName === 'rayout' || categoryName === 'state') {
       $('#level-3').attr('disabled', true).addClass('disabled');
+      $('#level-3').parent().addClass('disabled');
     } else {
       $('#level-3').attr('disabled', false).removeClass('disabled');
+      $('#level-3').parent().removeClass('disabled');
     }
   });
 }
@@ -44,7 +47,7 @@ function decisionInput () {
   }
 }
 
-function createClass () {
+function setEventHandler () {
   $('#level-2').on('change', function(){
     decisionInput();
   });
@@ -54,33 +57,36 @@ function createClass () {
   $('#level-4').on('keyup', function() {
     decisionInput();
   });
-
   $('#js-trigger').on('click', function(){
-    var lv2 = $('#level-2 option:selected').val();
-    var lv3 = $('#level-3:checked').val();
-    var lv4 = $('#level-4').val();
-    var lv5 = $('#level-5').val();
-    var lv6 = $('#level-6').val();
-
-    var createName = lv2;
-    if (lv3) {
-      createName = createName + '-' + lv3;
-    }
-    if (lv4) {
-      createName = createName + '-' + lv4;
-    }
-    if (lv5) {
-      createName = createName + '-' + lv5;
-    }
-    if (lv6) {
-      createName = createName + '-' + lv6;
-    }
-
-    $('#js-create').text(createName);
+    createClass();
   });
 }
 
-function validate (target, message) {
+function createClass() {
+  var lv2 = $('#level-2 option:selected').val();
+  var lv3 = $('#level-3:checked').val();
+  var lv4 = $('#level-4').val();
+  var lv5 = $('#level-5').val();
+  var lv6 = $('#level-6').val();
+
+  var createName = lv2;
+  if (lv3) {
+    createName = createName + '-' + lv3;
+  }
+  if (lv4) {
+    createName = createName + '-' + lv4;
+  }
+  if (lv5) {
+    createName = createName + '-' + lv5;
+  }
+  if (lv6) {
+    createName = createName + '-' + lv6;
+  }
+
+  $('#js-create').text(createName);
+}
+
+function setValidation (target, message) {
   target.on('blur', function() {
     if( $(this)[0].checkValidity() === false ){
       $('#js-error').text(message);

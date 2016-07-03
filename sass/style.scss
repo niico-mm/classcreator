@@ -49,17 +49,16 @@
 .txt-cmn-01 {
   font-size: 1.6rem;
 }
-.txt-error {
-  margin: 10px 0 0;
-  height: 2.4em;
-  font-size: 1.6rem;
-  color: crimson;
-  text-align: center;
-}
 .btn-cmn-01 {
   margin: 50px 0;
   text-align: center;
 }
+
+/* ----------------------------------------------------------
+ box
+---------------------------------------------------------- */
+/*box-border
+---------------------------------------------------------- */
 .box-border {
   height: 4.8em;
   line-height: 4.8em;
@@ -71,6 +70,9 @@
     text-align: center;
   }
 }
+
+/*box-flex
+---------------------------------------------------------- */
 .box-flex {
   margin: 30px 0 0;
   display: flex;
@@ -88,8 +90,26 @@
       background-color: #fff;
     }
   }
+
 }
 
+/*box-flex-usage
+---------------------------------------------------------- */
+.box-flex-usage {
+  display: flex;
+  justify-content: space-between;
+  .box-flex-usage-in {
+    align-self: flex-start;
+    width: 100%;
+    &:first-child {
+      border-left: 1px solid darkgray;
+    }
+  }
+}
+
+/* ----------------------------------------------------------
+ form
+---------------------------------------------------------- */
 select {
   height: 2.4em;
   background-color: #fff;
@@ -100,7 +120,6 @@ input[type="button"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1.6rem;
 }
 input[type="checkbox"] {
   width: 20px;
@@ -130,8 +149,9 @@ input[type="checkbox"] {
   display: inline-block;
   width: 30%;
   background-color: steelblue;
+  font-size: 2.0rem;
+  line-height: 2.0em;
   color: #fff;
-  line-height: 2.4em;
   cursor: pointer;
   &.disabled {
     color: darkgray;
@@ -139,17 +159,9 @@ input[type="checkbox"] {
   }
 }
 
-.box-flex-usage {
-  display: flex;
-  justify-content: space-between;
-  .box-flex-usage-in {
-    align-self: flex-start;
-    width: 100%;
-    &:first-child {
-      border-left: 1px solid darkgray;
-    }
-  }
-}
+/* ----------------------------------------------------------
+ table
+---------------------------------------------------------- */
 .table-usage {
   width: 100%;
   th,td {
@@ -166,4 +178,15 @@ input[type="checkbox"] {
       background-color: #eee;
     }
   }
+}
+
+/* ----------------------------------------------------------
+ text
+---------------------------------------------------------- */
+.txt-error {
+  margin: 10px 0 0;
+  height: 2.4em;
+  font-size: 1.6rem;
+  color: crimson;
+  text-align: center;
 }

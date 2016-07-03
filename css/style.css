@@ -31,6 +31,7 @@
 }
 
 .footer .footer-copyright {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   color: #fff;
 }
@@ -39,9 +40,11 @@
  common
 ---------------------------------------------------------- */
 .ttl-cmn-01 {
-  font-size: 3.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.8rem;
   margin-bottom: 30px;
   text-align: center;
+  color: steelblue;
 }
 
 .ttl-cmn-02 {
@@ -102,6 +105,16 @@
   background-color: #fff;
 }
 
+.box-flex label {
+  display: table;
+}
+
+.box-flex label span {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2.2rem;
+}
+
 /*box-flex-usage
 ---------------------------------------------------------- */
 .box-flex-usage {
@@ -134,10 +147,16 @@ input[type="button"] {
   border-radius: 5px;
 }
 
+input[type="text"].s-large {
+  max-width: 160px;
+}
+
+input[type="text"].s-small {
+  max-width: 80px;
+}
+
 input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .form-checkbox + span {

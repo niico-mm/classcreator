@@ -31,6 +31,11 @@ function setHierSelect() {
 
 function decisionInput () {
   if ($('#level-2 option:not(.default)').is(':selected')
+      && $('#level-3').is(':checked')
+      && $('#level-4').val() === ''
+      && $('#js-error').text() === '') {
+    $('#js-trigger').attr('disabled', false).removeClass('disabled');
+  } else if ($('#level-2 option:not(.default)').is(':selected')
       && $('#level-4').val() !== ''
       && $('#js-error').text() === '') {
     $('#js-trigger').attr('disabled', false).removeClass('disabled');
@@ -41,6 +46,9 @@ function decisionInput () {
 
 function createClass () {
   $('#level-2').on('change', function(){
+    decisionInput();
+  });
+  $('#level-3').on('click', function() {
     decisionInput();
   });
   $('#level-4').on('keyup', function() {
@@ -57,7 +65,9 @@ function createClass () {
     if (lv3) {
       createName = createName + '-' + lv3;
     }
-    createName = createName + '-' + lv4;
+    if (lv4) {
+      createName = createName + '-' + lv4;
+    }
     if (lv5) {
       createName = createName + '-' + lv5;
     }

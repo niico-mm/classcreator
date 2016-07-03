@@ -4,7 +4,7 @@ $(function() {
   decisionInput();
   createClass();
   validate($('#level-4'), '詳細は半角英小文字で入力してください');
-  validate($('#level-5'), '連番は半角数字で入力してください');
+  validate($('#level-6'), '連番は半角数字で入力してください');
 });
 
 function initSelect() {
@@ -60,6 +60,7 @@ function createClass () {
     var lv3 = $('#level-3:checked').val();
     var lv4 = $('#level-4').val();
     var lv5 = $('#level-5').val();
+    var lv6 = $('#level-6').val();
 
     var createName = lv2;
     if (lv3) {
@@ -70,6 +71,9 @@ function createClass () {
     }
     if (lv5) {
       createName = createName + '-' + lv5;
+    }
+    if (lv6) {
+      createName = createName + '-' + lv6;
     }
 
     $('#js-create').text(createName);
